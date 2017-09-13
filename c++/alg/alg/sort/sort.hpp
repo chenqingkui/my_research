@@ -235,4 +235,76 @@ public:
 		return 0;
 	}
 };
+
+template <typename T> class CQuickSort : public ISort<T>
+{
+private:
+	virtual int sort(T arr[],int indexStart,int indexEnd,int& cmp)
+	{
+		if(indexStart == indexEnd)
+		{
+			return 0;
+		}
+		int middleIndex = (indexStart + indexEnd) / 2;
+		int index = 0;
+		int middleValIndex = middleIndex;
+		T   middleVal = arr[middleIndex];
+		for(index = indexStart;index < middleValIndex;)
+		{
+			if(arr[index] > middleVal)
+			{
+				arr[middleValIndex] = arr[index];
+				for(int index2 = index;index2 < middleValIndex-1;index2++)
+				{
+					arr[index2] = arr[index2+1];
+				}
+				arr[--middleValIndex] = middleVal;
+				cmp += 1;
+			}
+			else
+			{
+				index++;
+			}
+		}
+		for(index = middleIndex;index <= indexEnd;index++)
+		{
+			if(arr[index] < middleVal)
+			{
+				arr[middleValIndex] = arr[index];
+				for(int index2 = index ; index2 > middleValIndex+1;index2--)
+				{
+					arr[index2] = arr[index2-1];
+				}
+				arr[++middleValIndex] = middleVal;
+				cmp += 1;
+			}
+		}
+		if(middleValIndex - 1 >= indexStart)
+		{
+			sort(arr,indexStart,middleValIndex-1,cmp);
+		}
+		if(middleValIndex + 1 <= indexEnd)
+		{
+			sort(arr,middleValIndex+1,indexEnd,cmp);
+		}
+		return 0;
+	}
+public:
+	virtual int sort(T arr[],int count)
+	{
+		bool sort_ok = CSort<T>::is_sorted(arr,count);
+		if(sort_ok)
+		{
+			return 0;
+		}
+		if(count < 1)
+		{
+			return 0;
+		}
+		int cmpCounts = 0;
+		sort(arr,0,count-1,cmpCounts);
+		printf("cmp count:%d\n",cmpCounts);
+		return 0;
+	}
+};
 #endif
