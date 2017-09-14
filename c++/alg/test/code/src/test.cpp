@@ -29,15 +29,29 @@ int main()
 	*/
 
 
+	
+	
+	
+
+	
 	/*
 	CShellSort<int> shellElem;
 	shellElem.sort(arrInt,arrCount);
 	*/
 
+	/*
 	CQuickSort<int> quickElem;
 	quickElem.sort(arrInt,arrCount);
-
-
+	*/
+	
+	/*
+	CQuickSortV2<int> quickElemV2;
+	quickElemV2.sort(arrInt,arrCount);
+	*/
+	
+	CQuickSortV3<int> quickElemV3;
+	quickElemV3.sort(arrInt,arrCount);
+	
 	for(int index  = 0;index < arrCount;index++)
 	{ 
 		std::cout << arrInt[index] << " " ;	
