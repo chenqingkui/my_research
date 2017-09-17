@@ -1,0 +1,2 @@
+streaming_rpc.thrift 为thrift文件
+thrift_gen.bat 生成Cpp头文件和源文件
