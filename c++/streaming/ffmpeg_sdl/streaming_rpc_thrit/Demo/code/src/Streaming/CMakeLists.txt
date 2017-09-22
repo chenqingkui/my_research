@@ -28,6 +28,7 @@ include_directories(${DIR_INCLUDE}/
 					${DIR_3RD_PARTY}/websocketpp
 					${DIR_3RD_PARTY}/sdl/
 					${DIR_3RD_PARTY}/sdl1.2/
+					${DIR_3RD_PARTY}/rtmp/
 	
 )
 
@@ -39,12 +40,14 @@ set (STREAM_LIB
 		debug		avcodec
 		debug		avutil
 		debug		swscale
+		debug		librtmp
 
 		optimized	SDL2
 		optimized	avformat
 		optimized	avcodec
 		optimized	avutil
 		optimized	swscale
+		optimized	librtmp
 	)
 elseif()
 set (STREAM_LIB
