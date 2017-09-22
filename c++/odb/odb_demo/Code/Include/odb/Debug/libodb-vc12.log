@@ -1,0 +1,74 @@
+﻿生成启动时间为 2017/4/3 17:43:33。
+     1>项目“F:\OpenSource\odb\libodb-2.4.0\libodb-2.4.0\odb\libodb-vc12.vcxproj”在节点 2 上(Build 个目标)。
+     1>ClCompile:
+         D:\Software\Develop\VS2013\VC\bin\CL.exe /c /I.. /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _USRDLL /D LIBODB_DYNAMIC_LIB /D _WINDLL /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /wd4355 /wd4800 /wd4290 /wd4251 /analyze- /errorReport:prompt callback.cxx exceptions.cxx database.cxx "vector-impl.cxx" connection.cxx "lazy-ptr-impl.cxx" "prepared-query.cxx" "query-dynamic.cxx" result.cxx "schema-catalog.cxx" section.cxx session.cxx statement.cxx "statement-processing.cxx" tracer.cxx transaction.cxx
+         transaction.cxx
+         tracer.cxx
+         statement-processing.cxx
+         statement.cxx
+         session.cxx
+         section.cxx
+         schema-catalog.cxx
+         result.cxx
+         query-dynamic.cxx
+         prepared-query.cxx
+         lazy-ptr-impl.cxx
+         connection.cxx
+         vector-impl.cxx
+         database.cxx
+         exceptions.cxx
+         callback.cxx
+         正在生成代码...
+         D:\Software\Develop\VS2013\VC\bin\CL.exe /c /I.. /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _USRDLL /D LIBODB_DYNAMIC_LIB /D _WINDLL /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\details\\" /Fd"Debug\vc120.pdb" /Gd /TP /wd4355 /wd4800 /wd4290 /wd4251 /analyze- /errorReport:prompt details\buffer.cxx details\condition.cxx details\lock.cxx details\mutex.cxx
+         mutex.cxx
+         lock.cxx
+         condition.cxx
+         buffer.cxx
+         正在生成代码...
+         D:\Software\Develop\VS2013\VC\bin\CL.exe /c /I.. /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _USRDLL /D LIBODB_DYNAMIC_LIB /D _WINDLL /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\details\shared-ptr\\" /Fd"Debug\vc120.pdb" /Gd /TP /wd4355 /wd4800 /wd4290 /wd4251 /analyze- /errorReport:prompt "details\shared-ptr\base.cxx"
+         base.cxx
+         D:\Software\Develop\VS2013\VC\bin\CL.exe /c /I.. /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _USRDLL /D LIBODB_DYNAMIC_LIB /D _WINDLL /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\details\win32\\" /Fd"Debug\vc120.pdb" /Gd /TP /wd4355 /wd4800 /wd4290 /wd4251 /analyze- /errorReport:prompt details\win32\init.cxx details\win32\once.cxx details\win32\tls.cxx details\win32\condition.cxx details\win32\thread.cxx details\win32\exceptions.cxx details\win32\dll.cxx
+         dll.cxx
+         exceptions.cxx
+         thread.cxx
+         condition.cxx
+         tls.cxx
+         once.cxx
+         init.cxx
+         正在生成代码...
+       Link:
+         D:\Software\Develop\VS2013\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"F:\OpenSource\odb\libodb-2.4.0\libodb-2.4.0\odb\..\bin\odb-d-2.4-vc12.dll" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"..\bin\odb-d-2.4-vc12.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"..\lib\odb-d.lib" /MACHINE:X86 /DLL Debug\callback.obj
+         Debug\exceptions.obj
+         Debug\database.obj
+         "Debug\vector-impl.obj"
+         Debug\connection.obj
+         "Debug\lazy-ptr-impl.obj"
+         "Debug\prepared-query.obj"
+         "Debug\query-dynamic.obj"
+         Debug\result.obj
+         "Debug\schema-catalog.obj"
+         Debug\section.obj
+         Debug\session.obj
+         Debug\statement.obj
+         "Debug\statement-processing.obj"
+         Debug\tracer.obj
+         Debug\transaction.obj
+         Debug\\details\buffer.obj
+         Debug\\details\condition.obj
+         Debug\\details\lock.obj
+         Debug\\details\mutex.obj
+         "Debug\\details\shared-ptr\base.obj"
+         Debug\\details\win32\init.obj
+         Debug\\details\win32\once.obj
+         Debug\\details\win32\tls.obj
+         Debug\\details\win32\condition.obj
+         Debug\\details\win32\thread.obj
+         Debug\\details\win32\exceptions.obj
+         Debug\\details\win32\dll.obj
+            正在创建库 ..\lib\odb-d.lib 和对象 ..\lib\odb-d.exp
+         libodb-vc12.vcxproj -> F:\OpenSource\odb\libodb-2.4.0\libodb-2.4.0\odb\..\bin\odb-d-2.4-vc12.dll
+     1>已完成生成项目“F:\OpenSource\odb\libodb-2.4.0\libodb-2.4.0\odb\libodb-vc12.vcxproj”(Build 个目标)的操作。
+
+生成成功。
+
+已用时间 00:01:13.54

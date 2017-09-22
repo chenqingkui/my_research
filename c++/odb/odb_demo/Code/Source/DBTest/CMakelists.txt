@@ -1,0 +1,53 @@
+SET(PROJECT DBTest)
+FILE(GLOB_RECURSE SOURCE_LISTS "*.cpp" "*.c" "*.h" "*.hxx" "*.cxx")
+#FILE(GLOB SOURCE_LISTS "*.cpp")
+#SET(SRC_LISTS  ""
+#   )
+
+#def 
+
+add_definitions(-DDATABASE_MYSQL)
+
+#一定要包含main.cpp 包含的"*.h"文件  
+include_directories(  
+    ${PROJECT_SOURCE_DIR}/Include/  
+    ${PROJECT_SOURCE_DIR}/Include/mysql  
+)  
+#库文件路径  
+if(CMAKE_BUILD_TYPE STREQUAL Debug) 
+  link_directories(
+     ${PROJECT_SOURCE_DIR}/../Library/Debug  
+  )  
+else()
+  link_directories(
+     ${PROJECT_SOURCE_DIR}/../Library/Release  
+  )  
+endif()  
+#添加自己生成的动态库/静态库 设置目标所需要的链接库  
+SET(CMAKE_DEBUG_POSTFIX "d")
+
+IF(CMAKE_BUILD_TYPE STREQUAL Debug)
+    SET(DEPEND_LIBRARY odb-d  odb-mysql-d)
+ELSE()
+    SET(DEPEND_LIBRARY odb  odb-mysql)
+ENDIF()
+link_libraries(${DEPEND_LIBRARY})  
+
+add_executable(${PROJECT} ${SOURCE_LISTS}) 
+#SET_TARGET_PROPERTIES( ${PROJECT}  
+#      PROPERTIES DEBUG_POSTFIX
+#     "${CMAKE_DEBUG_POSTFIX}" )
+SET_TARGET_PROPERTIES( ${PROJECT}
+      PROPERTIES DEBUG_POSTFIX
+      "d" )
+
+
+#if(CMAKE_BUILD_TYPE STREQUAL Debug) 
+# set(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/../Output/)   
+#else()
+  set(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/../Output/)  
+#endif()
+  
+#install(TARGETS main RUNTIME DESTINATION bin)  
+
+
